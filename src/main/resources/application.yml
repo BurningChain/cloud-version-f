@@ -1,0 +1,13 @@
+server:
+  port: 8081
+eureka:
+  client:
+    enabled: true
+    fetch-registry: false
+    register-with-eureka: false
+    region: cn-south-1
+    service-url:
+      default-zone: http://localhost:8761/eureka
+spring:
+  application:
+    name: eureka-server

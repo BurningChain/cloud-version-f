@@ -1,0 +1,28 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: miracle-gateway-zuul
+  security:
+    user:
+      name: miracle
+      password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8761/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+    ip-address: 127.0.0.1
+zuul:
+  ratelimit:
+    enabled: true
+    behind-proxy: true
+    policy-list:
+      user-service:
+        - limit: 10
+          refresh-interval: 60
+          - type:
+            - origin

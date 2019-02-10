@@ -1,0 +1,28 @@
+server:
+  port: 8085
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8761/eureka/
+spring:
+  application:
+    name: miracle-service-jade
+  security:
+    user:
+      name: miracle
+      password: 123456
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://47.93.219.222:3306/jade?userSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  typeAliasesPackage: com.miracle.cloud.bean
+  mapperLocations: classpath:mapper/*.xml

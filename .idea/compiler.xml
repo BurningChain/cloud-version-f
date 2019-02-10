@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="miracle-feign-provider" />
+        <module name="miracle-gateway" />
+        <module name="miracle-gateway-zuul" />
+        <module name="miracle-oauth2" />
+        <module name="miracle-persistence" />
+        <module name="miracle-registry" />
+        <module name="miracle-webapi" />
+        <module name="miracle-webapi-jade" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

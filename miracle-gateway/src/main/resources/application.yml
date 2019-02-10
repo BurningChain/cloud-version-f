@@ -1,0 +1,21 @@
+server:
+  port: 8971
+spring:
+  application:
+    name: miracle-gateway
+  security:
+    user:
+      name: miracle
+      password: 123456
+  redis:
+    host: 47.93.219.222
+    port: 6379
+    password: foobared
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8761/eureka/
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
