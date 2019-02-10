@@ -27,7 +27,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -58,11 +58,26 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-httpclient -->
+        <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-okhttp -->
         <dependency>
             <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-httpclient</artifactId>
-            <version>10.1.0</version>
+            <artifactId>feign-okhttp</artifactId>
+            <version>9.7.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!-- Sleuth automatically adds trace interceptors when in the classpath -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <!-- Sends trace data to zipkin over http (defaults to http://localhost:9411/api/v2/spans) -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
         </dependency>
     </dependencies>
 

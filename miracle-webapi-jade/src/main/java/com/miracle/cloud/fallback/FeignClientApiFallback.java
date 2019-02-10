@@ -8,7 +8,7 @@ import java.util.List;
 
 public class FeignClientApiFallback implements FeignClientApi {
     @Override
-    public Response<List<User>> findAllUsers() {
+    public Response<List<User>> getAll() {
         return new Response<>(404, "服务暂时不可用！", null);
     }
 

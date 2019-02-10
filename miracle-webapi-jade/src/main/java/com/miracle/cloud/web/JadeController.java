@@ -15,6 +15,7 @@ import feign.codec.Decoder;
 import feign.codec.Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.openfeign.FeignClientsConfiguration;
+import org.springframework.cloud.openfeign.support.SpringMvcContract;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,13 +43,13 @@ public class JadeController {
                 // 设置http-basic认证用户名及密码
                 .requestInterceptor(new BasicAuthRequestInterceptor("miracle", "123456"))
                 // 作用的feign和服务
-                .target(FeignClientApi.class, "http://miracle-service-user/");
+                .target(FeignClientApi.class, "http://miracle-service-user");
 
     }
 
-    @GetMapping("user")
+    @GetMapping("/user")
     public Response<List<User>> findAllUser() {
-        return feignClientApi.findAllUsers();
+        return feignClientApi.getAll();
     }
 
     @GetMapping("/all")

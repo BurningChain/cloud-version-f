@@ -21,8 +21,16 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://47.93.219.222:3306/jade?userSSL=false
+    url: jdbc:mysql://47.93.219.222:3306/jade?useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/
 mybatis:
   typeAliasesPackage: com.miracle.cloud.bean
   mapperLocations: classpath:mapper/*.xml
+feign:
+  okhttp:
+    enabled: true

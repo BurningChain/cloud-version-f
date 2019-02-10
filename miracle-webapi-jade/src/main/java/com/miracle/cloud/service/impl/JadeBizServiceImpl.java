@@ -24,7 +24,7 @@ public class JadeBizServiceImpl implements IJadeBizService {
     @Override
     public UserWithJadeVO getUsersAndJades() {
 
-        Response<List<User>> allUsers = feignClientApi.findAllUsers();
+        Response<List<User>> allUsers = feignClientApi.getAll();
         List<User> users = null;
         if (allUsers.getCode() == 200) {
             users = allUsers.getData();

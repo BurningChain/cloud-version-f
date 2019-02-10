@@ -14,6 +14,7 @@ public class FeignConfiguration {
         return new Contract.Default();
     }
 
+
 /*
     @Bean
     public PoolingHttpClientConnectionManager poolingHttpClientConnectionManager() {
