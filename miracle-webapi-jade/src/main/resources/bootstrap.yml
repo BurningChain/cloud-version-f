@@ -26,8 +26,20 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+    trace-id128: true
   zipkin:
     base-url: http://localhost:9411/
+    sender:
+      type: rabbit
+    enabled: true
+    locator:
+      discovery:
+        enabled: true
+  rabbitmq:
+    username: guest
+    addresses: 47.93.219.222
+    port: 5672
+    password: guest
 mybatis:
   typeAliasesPackage: com.miracle.cloud.bean
   mapperLocations: classpath:mapper/*.xml

@@ -17,6 +17,7 @@
         <module>miracle-webapi-jade</module>
         <module>miracle-feign-provider</module>
         <module>miracle-persistence</module>
+        <module>miracle-zipkin</module>
     </modules>
 
 
