@@ -1,0 +1,15 @@
+java -jar ./zipkin-server-2.11.7-exec.jar
+    --logging.level.zipkin2=DEBUG
+    --QUERY_PORT=9412
+    --COLLECTOR_SAMPLE_RATE=0.5
+    --RABBIT_ADDRESSES=47.93.219.222:5672
+    --RABBIT_CONCURRENCY=1
+--RABBIT_USER=guest
+--RABBIT_PASSWORD=guest
+--RABBIT_QUEUE=zipkin
+--STORAGE_TYPE=mysql
+--MYSQL_DB=test
+--MYSQL_HOST=47.93.219.222
+--MYSQL_TCP_PORT=3306
+--MYSQL_USER=root
+--MYSQL_PASS=123456
