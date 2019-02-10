@@ -1,6 +1,6 @@
 java -jar ./zipkin-server-2.12.1-exec.jar
 --logging.level.zipkin2=DEBUG
---QUERY_PORT=9412
+--QUERY_PORT=9411
 --COLLECTOR_SAMPLE_RATE=0.5
 --RABBIT_ADDRESSES=47.93.219.222:5672
 --RABBIT_CONCURRENCY=1
